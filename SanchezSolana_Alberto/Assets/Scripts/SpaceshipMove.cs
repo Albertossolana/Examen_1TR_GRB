@@ -6,6 +6,7 @@ public class SpaceshipMove : MonoBehaviour
 {
     [SerializeField] float speed = 1f;
 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class SpaceshipMove : MonoBehaviour
     {
         MovNave();
 
-
+       
     }
 
     void MovNave()
@@ -28,6 +29,8 @@ public class SpaceshipMove : MonoBehaviour
         {
             transform.Translate(Vector3.left * -MovHorizontal * Time.deltaTime);
         }
+        float MovRotacion = Input.GetAxis("Rotacion") * speed;
+
         if (Input.GetButton("Up"))
         {
             transform.Translate(Vector3.up * Time.deltaTime * speed);
@@ -41,5 +44,8 @@ public class SpaceshipMove : MonoBehaviour
         {
             transform.Translate(Vector3.forward * Time.deltaTime * speed);
         }
+
+        
+
     }
 }
