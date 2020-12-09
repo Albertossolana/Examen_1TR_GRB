@@ -11,9 +11,13 @@ public class ColisonadorNave : MonoBehaviour
 
             if (collision.gameObject.name == "Plane")
             {
-                //Destroy(gameObject);
+                
                 myMesh.enabled = false;
             }
-        }  
+            if (collision.gameObject.name == "Enemigo")
+        {
+            Destroy(gameObject);
+        }
+    }  
 }
 
