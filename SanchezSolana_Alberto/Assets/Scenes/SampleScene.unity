@@ -580,6 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Objetivo: {fileID: 771463657}
+  InitPos: {fileID: 963194228}
 --- !u!1 &2119569531
 GameObject:
   m_ObjectHideFlags: 0

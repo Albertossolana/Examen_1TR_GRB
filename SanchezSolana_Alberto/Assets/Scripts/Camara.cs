@@ -5,7 +5,7 @@ using UnityEngine;
 public class Camara : MonoBehaviour
 {
     [SerializeField] Transform Objetivo;
-  
+    [SerializeField] Transform InitPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,7 @@ public class Camara : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, Objetivo.position.y + 65, Objetivo.position.z);
-       
+        transform.position = new Vector3(transform.position.x, Objetivo.position.y + 100, transform.position.z);
+        transform.LookAt(Objetivo);
     }
 }
